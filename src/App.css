@@ -3,13 +3,6 @@
   background-color: #f1f2f4;
 }
 
-.App-logo {
-  height: 50vmin;
-  pointer-events: none;
-  -webkit-filter: drop-shadow(1px 1px 2px #222);
-  filter:         drop-shadow(1px 1px 2px #222);
-}
-
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -27,6 +20,11 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+.App-logo-placeholder {
+    height: 50vmin;
+}
+
 .App-link {
   color: #61dafb;
 }

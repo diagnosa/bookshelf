@@ -1,11 +1,16 @@
-import logo from './comingSoonLogo.png';
+import {lazy, Suspense} from 'react';
 import './App.css';
 
+const LogoImage = lazy(() => import('./component/LogoImage'));
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+          <Suspense fallback={
+              <div className="App-logo-placeholder"></div>
+            } >
+            <LogoImage />
+          </Suspense>
         <p>
           Personal Bookshelf
         </p>
