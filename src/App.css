@@ -22,9 +22,22 @@
 }
 
 .App-logo-placeholder {
-    height: 50vmin;
+  height: 50vmin;
+  width: 50vmin;
+  border-radius: 50%;
+  background-color: #cfcfcf;
+  visibility: hidden;
+  animation: fadein 2s;
+  animation-fill-mode: forwards;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes fadein {
+  from {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
 }
