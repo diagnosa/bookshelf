@@ -37,19 +37,19 @@ function Catalog() {
     }, [])
   
     if (error) {
-    return <div>Error: {error.message} {error.response}</div>;
+        return <div>Error: {error.message} {error.response}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+        return <div>Loading...</div>;
     } else {
-      return (
-        <ul>
-          {items.map(item => (
-            <li key={item.id[0]._}>
-              {item.name[0]}
-            </li>
-          ))}
-        </ul>
-      );
+        return (
+            <ul>
+                {items.map(item => (
+                    <li key={item.id[0]._}>
+                        {item.name[0]}
+                    </li>
+                ))}
+            </ul>
+        );
     }
   }
 

@@ -1,0 +1,20 @@
+{
+  "overrides": [
+    {
+      "files": ["*.json", "*.css", "*.module.css", ".prettierrc"],
+      "options": {
+        "tabWidth": 2,
+        "semi": false
+      }
+    },
+    {
+      "files": ["*.js"],
+      "options": {
+        "tabWidth": 4,
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "semi": true
+      }
+    }
+  ]
+}
