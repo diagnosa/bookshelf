@@ -6,21 +6,20 @@
 
 .App-logo-placeholder {
   height: 50vmin;
-  width: 50vmin;
-  border-radius: 50%;
+  width: 100%;
   background-color: #cfcfcf;
-  visibility: hidden;
-  animation: fadein 2s;
+  visibility: visible;
+  animation: fadeout 2s;
   animation-fill-mode: forwards;
 }
 
-@keyframes fadein {
+@keyframes fadeout {
   from {
     visibility: visible;
-    opacity: 0;
+    opacity: 1;
   }
   to {
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
   }
 }
