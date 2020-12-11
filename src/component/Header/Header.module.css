@@ -15,10 +15,13 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(80, 55, 43);
   overflow: hidden;
-  border-bottom: solid #333;
-  box-shadow: 0 0 30px rgba(0,0,0,0.8) inset;;
+  border-bottom: solid #3d2b2b;
+  box-shadow: 0 0 30px rgba(0,0,0,0.8) inset;
+  visibility: hidden;
+  animation: fadein 4s;
+  animation-fill-mode: forwards;
 }
 
 .title{
@@ -54,7 +57,7 @@
   left: inherit;
   bottom: -10px;
   width: 40%;
-  transform: scaleX(-1);
+  background-position: right;
 }
 
 .cover__back{
@@ -66,6 +69,7 @@
   background-repeat: repeat-x;
   background-size: contain;
   background-image: url('./headerImg.png');
+  box-shadow: inset 0px -50px 50px -50px #131212;
 }
 
 @media only screen and (max-width: 768px) and (min-width: 451px) {
@@ -107,5 +111,16 @@
   }
   .wrapper {
     height: 60px;
+  }
+}
+
+@keyframes fadein {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
   }
 }

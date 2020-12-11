@@ -1,6 +1,11 @@
+import { useImage } from 'react-image';
 import style from './Header.module.css';
+import headerImg from './headerImg.png';
 
 function Header() {
+    useImage({
+        srcList: headerImg,
+    });
     return (
         <header className={style.wrapper}>
             <div className={style.cover__back} />
