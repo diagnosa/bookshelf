@@ -38,7 +38,7 @@
 
 
 .cover__front {
-  width: 60vh;
+  width: 50%;
   height: 50px;
   right: 0;
   bottom: 0;
@@ -53,12 +53,12 @@
   right: 60%;
   left: inherit;
   bottom: -10px;
-  width: 60vh;
+  width: 40%;
   transform: scaleX(-1);
 }
 
 .cover__back{
-  width: 400px;
+  width: 35%;
   height: 40px;
   left: 40vh;
   bottom: 0;
