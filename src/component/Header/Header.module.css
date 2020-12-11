@@ -22,11 +22,12 @@
 }
 
 .title{
+  font-size: 23pt;
   letter-spacing: 2px;
   position: absolute;
   text-transform: uppercase;
   height: 90px;
-  bottom: 25%;
+  bottom: 40px;
 }
 .title > h1{
   color: #76ddbb;
@@ -37,7 +38,7 @@
 
 
 .cover__front {
-  width: 400px;
+  width: 60vh;
   height: 50px;
   right: 0;
   bottom: 0;
@@ -49,9 +50,10 @@
 }
 
 .cover__left {
-  right: 70vh;
+  right: 60%;
+  left: inherit;
   bottom: -10px;
-  width: 400px;
+  width: 60vh;
   transform: scaleX(-1);
 }
 
@@ -64,4 +66,46 @@
   background-repeat: repeat-x;
   background-size: contain;
   background-image: url('./headerImg.png');
+}
+
+@media only screen and (max-width: 768px) and (min-width: 451px) {
+  .title {
+    font-size: 75%;
+    bottom: 35%;
+    height: inherit;
+  }
+  .cover__front {
+    height: 35px;
+    width: 50%;
+  }
+  .cover__back {
+    height: 25px;
+    width: 45%;
+    left: 20%;
+  }
+  .wrapper {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: 65%;
+    bottom: -5px;
+    height: inherit;
+  }
+  .cover__front {
+    height: 25px;
+    width: 45%;
+  }
+  .cover__back {
+    height: 25px;
+    left: 20%;
+  }
+  .cover__left {
+    bottom: -5px;
+  }
+  .wrapper {
+    height: 60px;
+  }
 }
