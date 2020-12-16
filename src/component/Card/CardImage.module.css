@@ -1,0 +1,27 @@
+.wrapper {
+  height: 300px;
+  width: 200px;
+  position: relative;
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: fadein 4s;
+  animation-fill-mode: forwards;
+}
+
+.wrapper__blur{
+  filter: blur(3px);
+  transition: ease-in-out 2s;
+}
+
+@keyframes fadein {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
