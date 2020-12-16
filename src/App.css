@@ -1,43 +1,46 @@
 .App {
   text-align: center;
-  background-color: #f1f2f4;
+  background-color: #f0f0f0;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-header > p {
-  color: #211f22;
-  margin-top: 5px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.App-logo-placeholder {
-  height: 50vmin;
-  width: 50vmin;
-  border-radius: 50%;
+.App-body-placeholder {
+  height: 100%;
+  width: 100%;
   background-color: #cfcfcf;
-  visibility: hidden;
-  animation: fadein 2s;
+  visibility: visible;
+  animation: fadeout 4s;
   animation-fill-mode: forwards;
 }
 
-@keyframes fadein {
+.App-header-placeholder {
+  width: 100%;
+  height: 90px;
+  background-color: #cfcfcf;
+  visibility: visible;
+  animation: fadeout 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
   from {
     visibility: visible;
-    opacity: 0;
+    opacity: 1;
   }
   to {
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+
+@media only screen and (max-width: 768px) and (min-width: 451px) {
+  .App-header-placeholder {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .App-header-placeholder {
+    height: 60px;
   }
 }
