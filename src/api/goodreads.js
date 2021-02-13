@@ -10,7 +10,13 @@ class Goodreads {
         console.log(`${baseURL}${path}`);
         console.log();
         return this.api
-            .get(path, params)
+            .get(path, {
+                params: {
+                    v: 2,
+                    key: process.env.REACT_APP_GR_API_KEY,
+                    ...params,
+                },
+            })
             .then((result) => result.data)
             .catch((error) => {
                 console.log(error);

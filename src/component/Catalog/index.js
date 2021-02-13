@@ -1,47 +1,25 @@
 import { useEffect, useState } from 'react';
-import { parseStringPromise } from 'xml2js';
-import api from '../../api';
+import { CatalogService } from '../../services';
 import Card from '../Card';
 
-const path = `/review/list/${process.env.REACT_APP_GR_UID}.xml`;
+// const path = `/review/list/${process.env.REACT_APP_GR_UID}.xml`;
 function Catalog() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        // axios({
-        //     url,
-        //     headers: {
-        //         Accept: 'application/xml',
-        //     },
-        //     params: {
-        //         key: process.env.REACT_APP_GR_API_KEY,
-        //         v: 2,
-        //         sort: 'num_ratings',
-        //     },
-        // })
-        //     .then((result) => result.data)
-        api.getDetails(path, {
-            key: process.env.REACT_APP_GR_API_KEY,
-            v: 2,
-            sort: 'num_ratings',
-        })
-            .then(parseStringPromise)
-            .then(
-                (result) => {
-                    const {
-                        GoodreadsResponse: { reviews },
-                    } = result;
-                    setIsLoaded(true);
-                    console.log(reviews[0].review);
-                    setItems(reviews[0].review);
-                },
-                (error) => {
-                    setIsLoaded(true);
-                    setError(error);
-                }
-            );
+        const catalogService = new CatalogService();
+        catalogService.getBookList('num_ratings').then(
+            (bookList) => {
+                setIsLoaded(true);
+                setItems(bookList);
+            },
+            (error) => {
+                setIsLoaded(true);
+                setError(error);
+            }
+        );
     }, []);
 
     if (error) {
