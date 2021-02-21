@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header } from './Header';
+import Header from '../component/Header';
 
 const headerOptions = {
     title: 'Example/Header',
